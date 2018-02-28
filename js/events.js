@@ -1,4 +1,3 @@
-
 function getIt(){
 $('p').click(function(){
     alert('Hey!');
@@ -11,15 +10,15 @@ function frameIt(){
 }
 
 function pressIt(){
-  $('document').on('keydown',function(){
-   if (event.which == 71){
-     alert('g has been pressed')
+  $('#typing').on('keydown',function(letter){
+     if (letter.keyCode == 71){
+     alert('g has been pressed');
    }
  });
 }
 
 function submitIt(){
-  $('input:submit').on('click', function(){
+  $('form').on('submit', function(){
     alert('Your form is going to be submitted now.')
   });
 }
