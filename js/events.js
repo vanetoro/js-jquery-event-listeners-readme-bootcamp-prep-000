@@ -11,12 +11,12 @@ function frameIt(){
 
 function pressIt(){
   $('#typing').on('keydown',function(letter){
-     if (letter.keyCode == 71){
+    var currKey = letter.which || letter.keyCode
+     if (currKey == 71){
      alert('g has been pressed');
    }
  });
 }
-
 function submitIt(){
   $('form').on('submit', function(){
     alert('Your form is going to be submitted now.')
